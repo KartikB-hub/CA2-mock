@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OurTurn – who has paid, whose turn is next</title>
+<meta name="description" content="OurTurn is a prototype for savings circles. One screen shows who has paid this month and whose turn is next. All data is invented.">
+<style>
+  :root {
+    --bg: #f6f3ec; --card: #ffffff; --ink: #14251d; --soft: #4d5c54;
+    --green: #17603f; --green-bg: #e2f1e8;
+    --wait: #7a4d00; --wait-bg: #fdf0d2;
+    --line: #d9d4c7;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 19px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.4;
+  }
+  .proto { margin: 0; padding: 0.4rem 0.7rem; background: var(--wait-bg); border-bottom: 1px solid #e3c98a; font-size: 0.85rem; font-weight: 700; text-align: center; }
+  main { max-width: 30rem; margin: 0 auto; padding: 0.6rem 0.7rem 3rem; }
+  header { padding: 0 0.2rem 0.5rem; }
+  .brand { font-weight: 800; font-size: 1.15rem; color: var(--green); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 0.9rem; padding: 1rem 0.9rem; margin-bottom: 0.8rem; }
+  h1 { font-size: 1.7rem; line-height: 1.15; font-weight: 800; margin: 0 0 0.6rem; }
+  h2 { font-size: 1.2rem; margin: 0 0 0.7rem; }
+  p { margin: 0 0 0.7rem; }
+  .lead { font-size: 1.05rem; }
+  .btn {
+    display: block; width: 100%; min-height: 3rem; padding: 0.7rem 0.8rem; margin-top: 0.6rem;
+    font: inherit; font-weight: 700; text-align: center; text-decoration: none;
+    border-radius: 0.6rem; border: 2px solid var(--green); background: var(--green); color: #fff;
+  }
+  ol { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+  ol li { counter-increment: step; display: flex; gap: 0.7rem; align-items: flex-start; padding: 0.7rem 0; border-top: 1px solid var(--line); }
+  ol li:first-child { border-top: 0; padding-top: 0; }
+  ol li::before {
+    content: counter(step); flex: none; width: 2.2rem; height: 2.2rem; border-radius: 50%;
+    background: var(--green-bg); color: var(--green); font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+  }
+  ol strong { display: block; }
+  .honest { background: var(--wait-bg); border-color: #e3c98a; }
+  .honest ul { margin: 0; padding-left: 1.1rem; }
+  .honest li { margin-bottom: 0.35rem; }
+  .small { font-size: 0.85rem; color: var(--soft); }
+  a:focus-visible { outline: 3px solid #1a73e8; outline-offset: 2px; }
+</style>
+</head>
+<body>
+<p class="proto">Prototype. All names and amounts are invented.</p>
+<main>
+  <header>
+    <span class="brand">OurTurn</span>
+  </header>
+
+  <section class="card">
+    <h1>You keep the notebook. What if everyone could see it?</h1>
+    <p class="lead">You run a savings circle. When one payment is late, you do the chasing and you get the blame.</p>
+    <p class="lead">OurTurn is a prototype. One screen shows who has paid this month and whose turn is next.</p>
+    <a class="btn" href="app.html">Try the prototype</a>
+  </section>
+
+  <section class="card">
+    <h2>How it works</h2>
+    <ol>
+      <li><span><strong>One screen shows who has paid.</strong> All ten names for this month are on the first screen.</span></li>
+      <li><span><strong>You mark each payment.</strong> When €100 comes in, press "Received". The screen changes at once.</span></li>
+      <li><span><strong>The same screen shows whose turn is next.</strong> This month's name and next month's name are at the top.</span></li>
+    </ol>
+    <p class="small" style="margin:0.7rem 0 0">Today the prototype works on one phone. Sharing it with the whole circle comes next.</p>
+  </section>
+
+  <section class="card">
+    <h2>Do you run a circle, or pay into one?</h2>
+    <p>We are building this now. Tell us how your circle works and what goes wrong.</p>
+    <a class="btn" href="https://form.typeform.com/to/rM74Ht9D" target="_blank" rel="noopener">Tell us about your circle</a>
+    <p class="small" style="margin-top:0.6rem">The form opens in a new tab.</p>
+  </section>
+
+  <section class="card honest">
+    <h2>What you should know</h2>
+    <ul>
+      <li>This is a prototype made by a student founder.</li>
+      <li>OurTurn is not a bank and is not regulated.</li>
+      <li>It does not hold or move money. It only shows a record.</li>
+      <li>The names and amounts in the prototype are invented.</li>
+      <li>In the prototype, changes stay on one phone.</li>
+    </ul>
+  </section>
+
+  <p class="small">OurTurn · a student project. The circle and its members are invented.</p>
+</main>
+</body>
+</html>
